@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Marcos - Pizzaria</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://kit.fontawesome.com/c13298ad5b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo-container">
+              <h1>Pizzaria</h1>
+            </div>
+            <div class="nav-items" id="nav-container">
+              <div class="nav-close">
+                <h3 onclick="handleMenuToggle()">&#10539;</h3>
+              </div>
+              <div class="nav">
+                <a href="#destaques">Destaques</a>
+              </div>
+              <div class="nav">
+                <a href="#combos">Combos</a>
+              </div>
+              <div class="nav">
+                <a href="#info">Informações</a>
+              </div>
+            </div>
+            <div class="menu-icon">
+              <h3 onclick="handleMenuToggle()">&#9776;</h3>
+            </div>
+          </div>
+    </header>
+
+    <main>
+        <h4 style="margin-top: 100px; margin-bottom: -50px;">Destaques</h4>
+        <div id="destaques"></div>
+        <div class="destaques">
+            <div class="item">
+                <h2>Calabresa</h2>
+                <img src="images/Calabresa.jpeg" alt="pizza de calabresa">
+                <p>Calabresa, mussarela, orégano e molho de tomate</p>
+                <button onclick="location.href='#'">PEDIR AGORA</button>
+            </div>
+
+            <div class="item">
+                <h2>Portuguesa</h2>
+                <img src="images/Portuguesa.jpg" alt="pizza de portuguesa">
+                <p>Presunto, ovo, mussarela, azeitona, pimentão, cebola, orégano e molho de tomate</p>
+                <button onclick="location.href='#'">PEDIR AGORA</button>
+            </div>
+
+            <div class="item">
+                <h2>Marguerita</h2>
+                <img src="images/Marguerita.jpg" alt="pizza de marguerita">
+                <p>Mussarela, tomate, manjericão e molho de tomate</p>
+                <button onclick="location.href='#'">PEDIR AGORA</button>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="combos"></div>
+    <h4>Combos</h4>
+    <div class="combos-bg">
+        <div class="combos">
+            <div class="combo">
+                <h2>2 pizzas média + <br>refrigerante 2L</h2>
+                <h3>R$ 49,90</h3>
+                <br>
+                <img src="./images/combo.png" alt="combo 2 pizzas média + refrigerante 2L">
+            </div>
+    
+            <div class="combo">
+                <h2>2 pizzas grande + <br>refrigerante 2L</h2>
+                <h3>R$ 69,90</h3>
+                <br>
+                <img src="./images/combo.png" alt="combo 2 pizzas grande + refrigerante 2L">
+            </div>
+    
+            <div class="combo">
+                <h2>2 pizzas família + <br>refrigerante 2L</h2>
+                <h3>R$ 89,90</h3>
+                <br>
+                <img src="./images/combo.png" alt="combo 2 pizzas família + refrigerante 2L">
+            </div>
+        </div>
+    </div>
+
+    <footer id="info">
+        <div class="info">
+            <h2>estamos aqui:</h2>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.509395621947!2d-43.181789884418684!3d-22.89457484319261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5732a12a31%3A0x316901f971660ce1!2sMuseu%20do%20Amanh%C3%A3!5e0!3m2!1spt-BR!2sbr!4v1646414654267!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="info">
+            <h2>horário de funcionamento</h2>
+            <h3>Terça à Domingo<br>das 19h às 23h30</h3>
+        </div>
+        <div class="info">
+            <h2>maquininha de cartão</h2>
+            <h3>aceitamos:</h3>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-visa"></i>
+        </div>
+    </footer>
+
+    <a href="#"><i id="whatsapp" class="fa-brands fa-whatsapp"></i></a>
+
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
