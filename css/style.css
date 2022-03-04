@@ -119,16 +119,6 @@ p {
     }
   }
   
-
-
-
-
-
-
-
-
-
-
 .destaques, .combos, footer {
     display: flex;
     flex-wrap: wrap;
@@ -219,30 +209,28 @@ footer {
     padding: 30px;
     color: #fff;
     text-transform: uppercase;
-    min-height: auto;
+    max-height: 300px;
 }
 
 footer h2 {
     font-style: normal;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 footer h3 {
-    text-align: left;
+    text-align: center;
 }
 
 footer i {
-    float: left;
     margin-top: 10px;
-    margin-right: 10px;
     font-size: 3em;
 }
 
 .mapa {
-    max-width: 450px;
+    max-width: 350px;
     max-height: 250px;
-    margin-left: 0;
+    margin: auto;
     position: static !important;
 }
 
@@ -254,5 +242,12 @@ footer i {
 @media screen and (max-width: 1200px) {
     .info:nth-child(1) {
         margin-bottom: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        min-height: auto;
+        max-height: 100%;
     }
 }
