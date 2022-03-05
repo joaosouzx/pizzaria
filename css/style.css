@@ -48,11 +48,27 @@ p {
   }
 
   .header a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      font-style: normal;
-  }
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+    transition: 3s;
+}
+
+.header a::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #fff;
+    transition: .3s;
+}
+
+.header a:hover::after {
+    text-decoration: underline;
+    width: 100%;
+}
 
   .logo-container {
     padding: 10px 20px;
@@ -144,6 +160,7 @@ p {
 
 .item p {
     margin-bottom: 50px;
+    padding: 0 30px;
 }
 
 .item button {
