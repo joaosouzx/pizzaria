@@ -5,6 +5,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -135,7 +136,7 @@ p {
     }
   }
   
-.destaques, .combos, footer {
+.destaques, .combos, footer, .tele {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -147,6 +148,26 @@ p {
     margin-bottom: 15%;
     text-align: center;
     justify-content: center;
+}
+
+.tele-item {
+    flex: 0 40%;
+    text-align: center;
+    justify-content: center;
+}
+
+.tele-bg {
+    width: 100%;
+    background: rgb(8,124,68);
+    background: linear-gradient(90deg, rgba(8,124,68,1) 0%, rgba(2,186,136,1) 100%);
+}
+
+.tele-item img {
+    max-width: 350px;
+}
+
+.tele-item h4 {
+    color: #fff;
 }
 
 .item h2 {
@@ -163,7 +184,7 @@ p {
     padding: 0 30px;
 }
 
-.item button {
+.item button, .tele-item button {
     text-decoration: none;
     padding: 10px 15px;
     border: none;
@@ -176,17 +197,25 @@ p {
     font-style: italic;
 }
 
-.item button:hover {
+.item button:hover, .tele-item button:hover {
     transform: scale(1.1);
     box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
     cursor: pointer;
+}
+
+.item button::after, .tele-item button::after {
+    content: '\f232';
+    font-family: "FontAwesome";
+    color: #fff;
+    margin-left: 10px;
+    font-style: normal;
 }
 
 .combos-bg {
     background: url(../images/background-pizza.png);
 }
 
-.combos {
+.combos, .tele {
     height: auto;
     max-width: 1200px;
     margin: auto;
@@ -220,6 +249,13 @@ p {
     font-size: 4em;
     color: #42cba5;
 }
+
+.tele h1 {
+    color: #c82438;
+    text-align: center;
+}
+
+
 
 footer {
     background: #c82438;
@@ -262,9 +298,83 @@ footer i {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1050px) {
     footer {
         min-height: auto;
         max-height: 100%;
+    }
+
+    .tele-item h4 {
+        color: #fff;
+        font-size: 2em;
+    }
+    
+    .tele-item img {
+        max-width: 250px;
+    }
+
+    .item button, .tele-item button {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .tele-item img {
+        max-width: 200px;
+    }
+}
+
+
+
+.whatsapp-plug-icon{
+    background-color:#0ba360;
+    background-image:url(../images/whatsapp.svg);
+    background-position:50%;
+    background-repeat:no-repeat;
+    background-size:50% auto;
+    border-radius:50%;
+    bottom:20px;
+    cursor:pointer;
+    height:50px;
+    position:fixed;
+    right:20px;
+    transition:.3s;
+    width:50px;
+    z-index:1000
+}
+
+.whatsapp-plug-icon.active{
+    height:0;
+    opacity:0;
+    width:0
+}
+
+.whatsapp-plug-icon:after,.whatsapp-plug-icon:before{
+    animation:WaveWhatsApp 1.5s ease infinite;
+    border:4px solid #0ba360;
+    border-radius:50%;
+    bottom:-10px;
+    content:"";
+    left:-10px;
+    opacity:0;
+    position:absolute;
+    right:-10px;
+    top:-10px
+}
+
+.whatsapp-plug-icon:after{
+    animation-delay:.5s
+}
+
+.whatsapp-plug-icon:hover,.whatsapp-plug-icon:hover:after,.whatsapp-plug-icon:hover:before{
+    border:4px solid #15cc74
+}
+
+@keyframes WaveWhatsApp{
+    0%{
+        transform:scale(.5)
+    }
+    50%{
+        opacity:1}to{opacity:0;transform:scale(1.2)
     }
 }
